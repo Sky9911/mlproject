@@ -1,0 +1,21 @@
+
+
+CREATING VIRTUAL environment
+1. First i opened anaconda prompt and selected current directory to this folder 
+2. use command    conda create -p env_mlproject python=3.10 -y
+3. In your VS Code terminal or Anaconda Prompt, run these exact commands 
+        cd "C:\Users\natio\Documents\AIML\Complete Data Science,Machine Learning,DL,NLP Bootcamp\mlproject-self"
+        conda activate .\env_mlproject
+
+4. You can also activate directly from the anaconda prompt by 
+        - cd "C:\Users\natio\Documents\AIML\Complete Data Science,Machine Learning,DL,NLP Bootcamp\mlproject-self"
+        - conda activate .\env_mlproject
+        - code . {this is used to open vscode in the activated env}
+
+
+
+INSTALLING REQUIREMENTS
+1. we used command pip install -r requirements.txt
+
+
+
