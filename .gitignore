@@ -212,3 +212,7 @@ env_mlproject/
 venv/
 __pycache__/
 *.py[cod]
+
+
+note1.txt
+
