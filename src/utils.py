@@ -54,39 +54,10 @@ def evaluate_models(X_train, y_train,X_test,y_test,models,param):
         raise CustomException(e, sys)
     
 
-
-# from sklearn.model_selection import GridSearchCV
-# from sklearn.metrics import r2_score
-
-# def evaluate_models(X_train, y_train, X_test, y_test, models, param):
-#     try:
-#         report = {}
-#         for name, model in models.items():
-#             grid = param.get(name, {})  # handle missing grid
-
-#             if grid:  # tune if there is a grid
-#                 gs = GridSearchCV(
-#                     estimator=model,
-#                     param_grid=grid,
-#                     scoring="r2",
-#                     cv=3,
-#                     n_jobs=-1,
-#                     error_score="raise"
-#                 )
-#                 gs.fit(X_train, y_train)
-#                 best_model = gs.best_estimator_
-#             else:      # fit directly if no grid
-#                 model.fit(X_train, y_train)
-#                 best_model = model
-
-#             y_train_pred = best_model.predict(X_train)
-#             y_test_pred  = best_model.predict(X_test)
-
-#             train_r2 = r2_score(y_train, y_train_pred)
-#             test_r2  = r2_score(y_test,  y_test_pred)
-
-#             report[name] = test_r2  # you’re selecting by test score
-#         return report
-
-#     except Exception as e:
-#         raise CustomException(e, sys)
+def load_object(file_path):
+    try:
+        with open(file_path,"rb") as file_obj:
+            return dill.load(file_obj)
+        
+    except Exception as e:
+        raise CustomException(e,sys)
